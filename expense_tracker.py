@@ -13,13 +13,22 @@ def add_expense():
 
 
 def show_expenses():
-    # Travail de l'etudiant B
-    pass
+    if not expenses:
+        print("No expenses recorded.")
+        return
+
+    average = sum(expense["amount"] for expense in expenses) / len(expenses)
+    print(f"Average expense: {average:.2f}")
+    
 
 
 def show_total():
-    # Travail de l'etudiant B
-    pass
+    if not expenses:
+        print("No expenses recorded.")
+        return
+
+    total = sum(expense["amount"] for expense in expenses)
+    print(f"Total : {total:.2f}")
 
 
 
