@@ -22,28 +22,33 @@ def show_total():
     pass
 
 
+
+
+
 def main():
-    while True:
-        print("\n===== SUIVI DES DEPENSES =====")
-        print("1. Ajouter une depense")
-        print("2. Afficher les depenses")
-        print("3. Afficher le total")
-        print("4. Quitter")
-
-        choice = input("Votre choix : ")
-
-        if choice == "1":
-            add_expense()
-        elif choice == "2":
-            show_expenses()
-        elif choice == "3":
-            show_total()
-        elif choice == "4":
-            print("Au revoir !")
-            break
-        else:
-            print("Choix invalide.")
-
-
+  while True:
+   print("\n===== EXPENSE TRACKER =====")
+   print("1. Add an expense")
+   print("2. View expenses")
+   print("3. Show total")
+   print("4. Exit")
+   print("5. Delete an expense")
+   print("6. Show average")
+   choice = input("Choose an option: ")
+   if choice == "1":
+    add_expense()
+   elif choice == "2":
+    show_expenses()
+   elif choice == "3":
+    show_total()
+   elif choice == "4":
+    print("Goodbye!")
+    break
+   elif choice == "5":
+    delete_expense()
+   elif choice == "6":
+    show_average()
+   else:
+    print("Invalid option.")
 if __name__ == "__main__":
-    main()
+  main()
